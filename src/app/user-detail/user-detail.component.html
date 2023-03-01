@@ -1,0 +1,71 @@
+<mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar>
+        <mat-icon>perm_identity</mat-icon>
+      </div>
+      <mat-card-title>{{userData.fristName}} {{userData.lastName}}</mat-card-title>
+      <mat-card-subtitle>{{userData.email}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-list role="list">
+        <mat-list-item>
+            <div mat-line>
+              Phone : 
+              <button mat-button>{{userData.phone}}</button>
+            </div>
+        </mat-list-item>
+        <mat-list-item>
+            <div mat-line>
+              Wieght: 
+              <button mat-button>{{userData. weight}}kg</button>
+            </div>
+        </mat-list-item>
+        <mat-list-item>
+            <div mat-line>
+              Hieght : 
+              <button mat-button>{{userData.height}}m</button>
+            </div>
+        </mat-list-item>
+        <mat-list-item>
+            <div mat-line>
+              Trainer required : 
+              <button mat-button>{{userData.trainer}}</button>
+            </div>
+        </mat-list-item>
+        <mat-list-item>
+            <div mat-line>
+              Gender : 
+              <button mat-button>{{userData.gender}}</button>
+            </div>
+        </mat-list-item>
+        <mat-list-item>
+            <div mat-line>
+              Package: 
+              <button mat-button>{{userData.package}}</button>
+            </div>
+        </mat-list-item>
+        <mat-list-item>
+            <div mat-line>
+              Have you been in Gym: 
+              <button mat-button>{{userData.gym}}</button>
+            </div>
+        </mat-list-item>
+        <mat-list-item>
+            <div mat-line>
+              Goal: 
+              <button mat-button>
+                <mat-chip-listbox >
+                      <ng-container *ngFor="let data of userData.gymcond">
+                        <mat-chip-option selected>
+                            {{data}}
+                        </mat-chip-option>
+                    </ng-container>
+                </mat-chip-listbox>
+              </button>
+            </div>
+        </mat-list-item>
+       
+      </mat-list>
+    <mat-card-actions>
+   
+    </mat-card-actions>
+  </mat-card>
